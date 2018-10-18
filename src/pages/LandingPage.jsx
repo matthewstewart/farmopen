@@ -21,22 +21,18 @@ class LandingPage extends Component {
                   <img src={phatBeetsLogo} className="img-fluid" alt="Phat Beets Logo"/>
                 </a>
               </div>
-              <ul className="list-group list-group-flush">
-                <Link 
-                  className="list-group-item list-group-item-action bg-success text-light"
-                  to="/login"
-                >Login</Link>
-                <Link 
-                  className="list-group-item list-group-item-action bg-primary text-light"
-                  to="/signup"
-                >Sign Up</Link>
-                { this.props.isLoggedIn ? (
-                  <button
-                    className="list-group-item list-group-item-action bg-secondary text-light"
-                    onClick={ this.props.logoutCurrentUser }
-                  >Logout</button>
-                ) : null }
-              </ul>
+              { !this.props.isLoggedIn ? (
+                <ul className="list-group list-group-flush">
+                  <Link 
+                    className="list-group-item list-group-item-action bg-success text-light"
+                    to="/login"
+                  >Login</Link>
+                  <Link 
+                    className="list-group-item list-group-item-action bg-primary text-light"
+                    to="/signup"
+                  >Sign Up</Link>
+                </ul>                
+              ) : null }
             </div>
           </div>
         </div>
