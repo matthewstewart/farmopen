@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Auth from './modules/Auth';
+import Navigation from './layout/Navigation';
 import Routes from './Routes';
 import moment from 'moment';
 import axios from 'axios';
@@ -55,6 +56,11 @@ class App extends Component {
   render() {
     return (
       <div className="viewport-container">
+        <Navigation
+          {...this.state}
+          loginCurrentUser={this.loginCurrentUser}
+          logoutCurrentUser={this.logoutCurrentUser}
+        /> 
         <Routes
           {...this.state}
           loginCurrentUser={this.loginCurrentUser}
