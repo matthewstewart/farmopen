@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Auth from '../modules/Auth';
 import { Link, Redirect } from 'react-router-dom';
 
-class LoginPage extends Component {
+class Login extends Component {
 
   constructor(props) {
     super(props);
@@ -125,4 +125,4 @@ class LoginPage extends Component {
   }
 }
 
-export default LoginPage;
+export default Login;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import ProfilePage from './pages/ProfilePage';
 
 class Routes extends Component {
@@ -11,10 +11,10 @@ class Routes extends Component {
       return ( <LandingPage {...this.props} /> );
     };
     const loginPage = () => {
-      return ( <LoginPage {...this.props} /> );
+      return ( <Login {...this.props} /> );
     };
     const signupPage = () => {
-      return ( <SignupPage {...this.props} /> );
+      return ( <Signup {...this.props} /> );
     };
     const profilePage = () => {
       return ( <ProfilePage {...this.props} /> );
