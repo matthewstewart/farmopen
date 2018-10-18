@@ -14,19 +14,6 @@ class Navigation extends Component {
 
         <div className="collapse navbar-collapse" id="primaryNavigation">
           <ul className="navbar-nav mr-auto"> 
-            
-            { (this.props.isLoggedIn && this.props.currentUser.isAdmin) ? (
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Admin
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <h5 className="dropdown-header">Users</h5>
-                  <div className="dropdown-divider"></div>
-                  <Link className="dropdown-item" to="/users">List All Users</Link>
-                </div>
-              </li>
-            ) : null }
 
             { this.props.isLoggedIn ? (
               <li className="nav-item dropdown">
